@@ -3,9 +3,11 @@ package com.metacoding.storev2.store;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @NoArgsConstructor
 @Getter
+@Setter
 @Table(name = "store_tb")
 @Entity
 public class Store {
