@@ -27,19 +27,6 @@ public class StoreRepository {
         q.setParameter(3, price);
         q.executeUpdate();
     }
-
-//    public StoreResponse.DetailDTO findByID(int id) {
-//        Query q = em.createNativeQuery("select * from store_tb where id = ?");
-//        q.setParameter(1, id);
-//        Object[] o = (Object[]) q.getSingleResult();
-//        StoreResponse.DetailDTO detailDTO = new StoreResponse.DetailDTO(
-//                (String) o[0],
-//                ((Number) o[1]).intValue(),
-//                ((Number) o[2]).intValue()
-//        );
-//        return detailDTO;
-//    }
-
     public Store findDetailByID(int id) {
         Query q = em.createNativeQuery("select * from store_tb where id = ?", Store.class);
         q.setParameter(1, id);
