@@ -5,9 +5,9 @@ import lombok.Data;
 public class StoreRequest {
 
     @Data
-    public class ProductDTO {
+    public static class SaveDTO {
         private String name;
-        private int stock;
-        private int price;
+        private Integer stock;
+        private Integer price;
     }
 }
